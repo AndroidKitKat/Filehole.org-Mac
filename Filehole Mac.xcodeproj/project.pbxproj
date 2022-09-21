@@ -11,6 +11,8 @@
 		8CD6FF7528DA6FED007F8D70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6FF7428DA6FED007F8D70 /* ContentView.swift */; };
 		8CD6FF7728DA6FEE007F8D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6FF7628DA6FEE007F8D70 /* Assets.xcassets */; };
 		8CD6FF7A28DA6FEE007F8D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD6FF7928DA6FEE007F8D70 /* Preview Assets.xcassets */; };
+		8CD6FF8328DA88CF007F8D70 /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD6FF8228DA88CF007F8D70 /* FilePicker */; };
+		8CD6FF8928DAA1A9007F8D70 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD6FF8828DAA1A9007F8D70 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD6FF8328DA88CF007F8D70 /* FilePicker in Frameworks */,
+				8CD6FF8928DAA1A9007F8D70 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,10 @@
 			dependencies = (
 			);
 			name = "Filehole Mac";
+			packageProductDependencies = (
+				8CD6FF8228DA88CF007F8D70 /* FilePicker */,
+				8CD6FF8828DAA1A9007F8D70 /* Alamofire */,
+			);
 			productName = "Filehole Mac";
 			productReference = 8CD6FF6F28DA6FED007F8D70 /* Filehole Mac.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,10 @@
 				Base,
 			);
 			mainGroup = 8CD6FF6628DA6FED007F8D70;
+			packageReferences = (
+				8CD6FF8128DA88CF007F8D70 /* XCRemoteSwiftPackageReference "FilePicker" */,
+				8CD6FF8728DAA1A9007F8D70 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8CD6FF7028DA6FED007F8D70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,6 +277,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Filehole Mac/Filehole_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -292,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Filehole Mac/Filehole_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -336,6 +350,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CD6FF8128DA88CF007F8D70 /* XCRemoteSwiftPackageReference "FilePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markrenaud/FilePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8CD6FF8728DAA1A9007F8D70 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CD6FF8228DA88CF007F8D70 /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CD6FF8128DA88CF007F8D70 /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
+		8CD6FF8828DAA1A9007F8D70 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CD6FF8728DAA1A9007F8D70 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CD6FF6728DA6FED007F8D70 /* Project object */;
 }
